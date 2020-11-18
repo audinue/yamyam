@@ -1,0 +1,32 @@
+<script type="module">
+  import { append, form, p, label, input, br, button } from './index.js'
+
+  addEventListener('dom', console.log)
+
+  addEventListener('DOMContentLoaded', function () {
+    let message = p('Message:')
+    append(document.body, [
+      message,
+      form(
+        p(
+          label('Username:'),
+          br(),
+          input({
+            name: 'username',
+            oninput (e) {
+              message.textContent = 'Message: ' + e.target.value
+            }
+          })
+        ),
+        p(
+          label('Password:'),
+          br(),
+          input({ name: 'password', type: 'password' })
+        ),
+        p(
+          button({ disabled: true }, 'Submit')
+        )
+      )
+    ])
+  })
+</script>

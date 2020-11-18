@@ -1,0 +1,16 @@
+{
+  "name": "yamyam",
+  "version": "1.0.0",
+  "homepage": "https://github.com/audinue/yamyam",
+  "bugs": "https://github.com/audinue/yamyam/issues",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "main": "index.min.js",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.33.3",
+    "rollup-plugin-filesize": "^9.0.2",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

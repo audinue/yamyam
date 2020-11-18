@@ -1,0 +1,14 @@
+<script type="module">
+  import { button } from '../h/index.js'
+  import { bind } from './index.js'
+
+  let count = 0
+
+  bind('body', function () {
+    return button({
+      onclick () {
+        count++
+      }
+    }, count)
+  })
+</script>

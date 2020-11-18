@@ -1,0 +1,21 @@
+<script type="module">
+  import { style } from './index.js'
+
+  addEventListener('DOMContentLoaded', function () {
+    let styles = style({
+      link: {
+        textDecoration: 'underline',
+        hover: {
+          color: 'blue'
+        }
+      },
+      message: {
+        fontWeight: 'bold'
+      }
+    })
+    document.body.innerHTML = `
+      <span class="${styles.link}">Link</span>
+      <span class="${styles.message}">Message</span>
+    `
+  })
+</script>
