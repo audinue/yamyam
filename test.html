@@ -1,0 +1,35 @@
+<meta name="viewport" content="width=device-width">
+<script type="module">
+  import { div, style, bind } from 'https://unpkg.com/yamyam'
+
+  let count = 0
+
+  let styles = style({
+    counter: {
+      display: 'inline-block',
+      font: 'bold 24pt sans-serif',
+      userSelect: 'none',
+      cursor: 'pointer',
+      color: '#fff',
+      textAlign: 'center',
+      padding: '16px',
+      background: '#e91e63',
+      borderRadius: '5px',
+      WebkitTapHighlightColor: 'transparent',
+      transition: 'transform .3s',
+      active: {
+        transform: 'scale(1.2)',
+        background: '#fff'
+      }
+    }
+  })
+
+  bind('body', function () {
+    return div({
+      class: styles.counter,
+      onclick () {
+        count++
+      }
+    }, count)
+  })
+</script>
